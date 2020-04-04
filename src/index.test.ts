@@ -14,7 +14,7 @@ test('version', async () => {
     version: true
   });
   expect(spy.mock.calls).toEqual([
-    [`birman-test@${require('../package.json').version}`],
+    [`walrus-test@${require('../package.json').version}`],
     [`jest@${require('jest/package.json').version}`]
   ]);
   spy.mockRestore();

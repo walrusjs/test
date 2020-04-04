@@ -1,5 +1,5 @@
 import { join } from 'path';
-import createDefaultConfig from './createDefaultConfig';
+import createDefaultConfig from './';
 
 const fixtures = join(__dirname, 'fixtures');
 

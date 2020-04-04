@@ -4,7 +4,7 @@ import { options as CliOptions } from 'jest-cli/build/cli/args';
 import assert from 'assert';
 import { join } from 'path';
 import { existsSync } from 'fs';
-import createDefaultConfig from './createDefaultConfig/createDefaultConfig';
+import createDefaultConfig from './create-default-config';
 import { BirmanTestArgs, PickedJestCliOptions } from './types';
 
 const debug = createDebug('walrus:test');

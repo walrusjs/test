@@ -15,6 +15,7 @@
   "license": "MIT",
   "scripts": {
     "build": "father-build",
+    "test": "node ./bin/walrus-test.js",
     "release": "walrus release"
   },
   "dependencies": {
