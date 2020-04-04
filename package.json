@@ -1,0 +1,44 @@
+{
+  "name": "@walrus/test",
+  "version": "1.0.0",
+  "description": "test library",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib",
+    "helpers",
+    "bin"
+  ],
+  "bin": {
+    "walrus-test": "bin/walrus-test.js"
+  },
+  "license": "MIT",
+  "scripts": {
+    "build": "father-build",
+    "release": "walrus release"
+  },
+  "dependencies": {
+    "@babel/core": "^7.9.0",
+    "@birman/babel-preset-birman": "1.2.0",
+    "@birman/utils": "1.1.2",
+    "@types/jest": "^25.2.1",
+    "babel-jest": "^25.2.6",
+    "core-js": "^3.6.4",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^25.2.7",
+    "jest-cli": "^25.2.7",
+    "jest-environment-jsdom-fourteen": "^1.0.1",
+    "regenerator-runtime": "^0.13.3",
+    "whatwg-fetch": "^3.0.0"
+  },
+  "devDependencies": {
+    "@walrus/cli": "^1.2.0",
+    "@walrus/plugin-release": "^1.7.0",
+    "@walrus/preset-lint": "^1.1.2",
+    "father-build": "^1.17.2",
+    "typescript": "^3.8.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
