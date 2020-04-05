@@ -1,11 +1,11 @@
 <h1 align="center">@walrus/test</h1>
 
 <h2 align="center">
-A zero configuration test library.
+A zero configuration test library based on jest.
 </h2>
 
-[![NPM version](https://img.shields.io/npm/v/@walrus/test.svg?style=flat)](https://npmjs.org/package/@walrus/test.svg)
-[![NPM downloads](https://img.shields.io/npm/dm/@walrus/test.svg?style=flat)](https://npmjs.org/package/@walrus/test.svg)
+[![NPM version](https://img.shields.io/npm/v/@walrus/test.svg?style=flat)](https://npmjs.org/package/@walrus/test)
+[![NPM downloads](https://img.shields.io/npm/dm/@walrus/test.svg?style=flat)](https://npmjs.org/package/@walrus/test)
 
 ## 📦 安装
 
