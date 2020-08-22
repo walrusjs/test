@@ -32,3 +32,15 @@ scripts: {
 ```
 
 命令行执行 `yarn test` || `npm run test`
+
+## 一些常用小技巧
+
+* 测试指定目录或指定文件的测试用例
+
+```
+# 测试指定的目录, 可使用正则
+walrus-test path/dir
+
+# 测试指定的文件, 可使用正则
+walrus-test path/to/my-test.js
+```
