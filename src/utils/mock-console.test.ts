@@ -1,4 +1,4 @@
-import mockConsole, { MessageStore, MessageStoreWithType } from './mockConsole';
+import mockConsole, { MessageStore, MessageStoreWithType } from './mock-console';
 
 test('test mockConsole', () => {
   const reset = mockConsole();

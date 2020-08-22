@@ -26,29 +26,7 @@ const consoleFunctionName = Object.keys(console).filter(
 );
 
 /**
- * @example
- * function sample() {
- *   console.log('a');
- *   console.warn('b');
- *   return 0;
- * }
- *
- * test('test sample', () => {
- *   const reset = mockConsole();
- *   expect(sample()).toBe(0);
- *   reset();
- *   expect(reset.messages).toEqual([
- *     ['log', 'a'],
- *     ['warn', 'b'],
- *   ]);
- * });
- *
- * test('test sample', () => {
- *   const reset = mockConsole.log();
- *   expect(sample()).toBe(0);
- *   reset();
- *   expect(reset.messages).toEqual([['a']]);
- * });
+ * 模拟控制台
  */
 function mockConsole(
   messageStore: MessageStoreWithType = []
