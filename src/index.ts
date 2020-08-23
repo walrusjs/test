@@ -14,6 +14,9 @@ export * from './utils';
 export default async function (args: BirmanTestArgs) {
   process.env.NODE_ENV = 'test';
 
+  // 找不到文件时允许测试通过
+  args.passWithNoTests = true;
+
   if (args.debug) {
     createDebug.enable('walrus:test');
   }
