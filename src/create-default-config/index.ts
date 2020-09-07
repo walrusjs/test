@@ -36,7 +36,8 @@ export default function (cwd: string, args: BirmanTestArgs) {
     ].filter(Boolean),
     moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx', 'json'],
     moduleNameMapper: {
-      '\\.(css|less|sass|scss|stylus)$': require.resolve('identity-obj-proxy')
+      '\\.(css|less|sass|scss|stylus)$': require.resolve('identity-obj-proxy'),
+      "@/([^\\.]*)$": "<rootDir>/src/$1"
     },
     setupFiles: [require.resolve('../../helpers/setupFiles/shim')],
     setupFilesAfterEnv: [require.resolve('../../helpers/setupFiles/jasmine')],
