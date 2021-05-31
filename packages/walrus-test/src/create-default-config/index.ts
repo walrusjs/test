@@ -2,6 +2,7 @@ import { isLernaPackage } from '@birman/utils';
 import { existsSync } from 'fs';
 import { join } from 'path';
 import assert from 'assert';
+import type { Config } from '@jest/types';
 import { BirmanTestArgs } from '../types';
 
 export default function (cwd: string, args: BirmanTestArgs) {
@@ -22,7 +23,7 @@ export default function (cwd: string, args: BirmanTestArgs) {
     );
   }
 
-  return {
+  const jestConfig: Config.InitialOptions = {
     collectCoverageFrom: [
       'index.{js,jsx,ts,tsx}',
       hasSrc && 'src/**/*.{js,jsx,ts,tsx}',
@@ -41,11 +42,16 @@ export default function (cwd: string, args: BirmanTestArgs) {
     },
     setupFiles: [require.resolve('../../helpers/setupFiles/shim')],
     setupFilesAfterEnv: [require.resolve('../../helpers/setupFiles/jasmine')],
-    testEnvironment: require.resolve('jest-environment-jsdom-fourteen'),
     testMatch: [`${testMatchPrefix}**/?*.(${testMatchTypes.join('|')}).(j|t)s?(x)`],
     testPathIgnorePatterns: ['/node_modules/', '/fixtures/'],
     transform: {
-      '^.+\\.(js|jsx|ts|tsx)$': require.resolve('../../helpers/transformers/javascript'),
+      "\\.[jt]sx?$": ['esbuild-jest', {
+          loaders: {
+            '.spec.js': 'jsx',
+            '.js': 'jsx'
+          }
+        }
+      ],
       '^.+\\.(css|less|sass|scss|stylus)$': require.resolve('../../helpers/transformers/css'),
       '^(?!.*\\.(js|jsx|ts|tsx|css|less|sass|scss|stylus|json)$)': require.resolve(
         '../../helpers/transformers/file'
@@ -55,5 +61,7 @@ export default function (cwd: string, args: BirmanTestArgs) {
     transformIgnorePatterns: [],
     // 用于设置 jest worker 启动的个数
     ...(process.env.MAX_WORKERS ? { maxWorkers: Number(process.env.MAX_WORKERS) } : {})
-  };
+  }
+
+  return jestConfig;
 }

@@ -1,45 +1,33 @@
 {
-  "name": "@walrus/test",
-  "version": "1.1.3",
-  "description": "test library",
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
-  "files": [
-    "lib",
-    "helpers",
-    "bin"
-  ],
-  "bin": {
-    "walrus-test": "bin/walrus-test.js"
-  },
+  "name": "@walrus/root",
+  "private": true,
   "license": "MIT",
   "scripts": {
     "build": "father-build",
-    "test": "node ./bin/walrus-test.js",
+    "test": "lerna run test",
+    "test:examples": "lerna run --scope @examples/* test",
     "release": "walrus release"
   },
-  "dependencies": {
-    "@babel/core": "7.11.6",
-    "@birman/babel-preset-birman": "1.2.1",
-    "@birman/utils": "1.2.1",
-    "@types/jest": "26.0.13",
-    "babel-jest": "26.3.0",
-    "core-js": "3.6.5",
-    "identity-obj-proxy": "3.0.0",
-    "jest": "26.4.2",
-    "jest-cli": "26.4.2",
-    "jest-environment-jsdom-fourteen": "^1.0.1",
-    "regenerator-runtime": "0.13.7",
-    "whatwg-fetch": "3.4.1"
-  },
   "devDependencies": {
+    "@types/jest": "^26.0.23",
+    "@types/react": "^17.0.8",
+    "@types/react-dom": "^17.0.5",
     "@walrus/cli": "^1.3.4",
     "@walrus/plugin-release": "^1.9.1",
     "@walrus/preset-lint": "^1.1.7",
+    "alias-hq": "^5.1.6",
+    "esbuild": "^0.12.3",
+    "esbuild-jest": "^0.5.0",
     "father-build": "^1.18.4",
+    "jest": "^27.0.1",
+    "lerna": "^4.0.0",
+    "mock-fs": "^5.0.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "typescript": "^4.0.2"
   },
-  "publishConfig": {
-    "access": "public"
-  }
+  "workspaces": [
+    "packages/*",
+    "examples/*"
+  ]
 }
