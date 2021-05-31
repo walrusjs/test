@@ -1,4 +1,5 @@
 {
+  "extends": "../../tsconfig.json",
   "compilerOptions": {
     "baseUrl": ".",
     "target": "es2018",
@@ -7,7 +8,6 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "importHelpers": true,
-    "esModuleInterop": true, 
     "jsx": "react",
     "lib" :[
       "dom",
@@ -15,9 +15,6 @@
       "es2017",
       "es2018",
       "es2019"
-    ],
-    "paths": {
-      "calculator": [ "./examples/ts-jsconfig-paths/libs/calculator.ts" ]
-    }
+    ]
   }
 }
