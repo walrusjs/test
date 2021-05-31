@@ -1,0 +1,19 @@
+{
+  "name": "@walrus/esbuild-jest",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "test": "../../node_modules/.bin/jest"
+  },
+  "peerDependencies": {
+    "esbuild": ">=0.9.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

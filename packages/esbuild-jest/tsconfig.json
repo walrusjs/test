@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "target": "es2018",
+    "module": "commonjs",
+    "outDir": "dist",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "importHelpers": true,
+    "esModuleInterop": true, 
+    "jsx": "react",
+    "lib" :[
+      "dom",
+      "es2015",
+      "es2017",
+      "es2018",
+      "es2019"
+    ],
+    "paths": {
+      "calculator": [ "./examples/ts-jsconfig-paths/libs/calculator.ts" ]
+    }
+  }
+}
