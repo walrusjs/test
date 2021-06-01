@@ -3,8 +3,11 @@
   "private": true,
   "license": "MIT",
   "scripts": {
+    "bootstrap": "lerna bootstrap",
     "build": "father-build",
-    "test": "lerna run test",
+    "clean": "lerna clean",
+    "test": "npm run test:packages && npm run test:examples",
+    "test:packages": "lerna run --scope @walrus/* test",
     "test:examples": "lerna run --scope @examples/* test",
     "release": "walrus release"
   },

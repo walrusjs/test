@@ -1,6 +1,10 @@
 {
   "compilerOptions": {
+    "module": "commonjs",
     "esModuleInterop": true,
-    "allowJs": true
+    "allowJs": true,
+    "outDir": "dist",
+    "resolveJsonModule": true,
+    "moduleResolution": "node",
   }
 }
