@@ -13,6 +13,10 @@
   "peerDependencies": {
     "esbuild": ">=0.9.3"
   },
+  "devDependencies": {
+    "esbuild": "^0.12.8",
+    "jest": "^27.0.4"
+  },
   "publishConfig": {
     "access": "public"
   }

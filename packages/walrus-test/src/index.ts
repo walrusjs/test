@@ -1,16 +1,13 @@
 import { runCLI } from 'jest';
 import { createDebug, mergeConfig } from '@birman/utils';
-import { options as CliOptions } from 'jest-cli/build/cli/args';
 import assert from 'assert';
 import { join } from 'path';
 import { existsSync } from 'fs';
 import createDefaultConfig from './create-default-config';
+import { JestCliOptions } from './config';
 import { WalrusTestArgs, PickedJestCliOptions } from './types';
 
 const debug = createDebug('walrus:test');
-
-console.log('****************************************************************');
-console.log(require('jest-cli/build/cli/args'));
 
 export default async function (args: WalrusTestArgs) {
   process.env.NODE_ENV = 'test';
@@ -49,11 +46,11 @@ export default async function (args: WalrusTestArgs) {
   debug(`final config: ${JSON.stringify(config)}`);
 
   // Generate jest options
-  const argsConfig = Object.keys(CliOptions).reduce((prev, name) => {
+  const argsConfig = Object.keys(JestCliOptions).reduce((prev, name) => {
     if (args[name]) prev[name] = name;
 
     // Convert alias args into real one
-    const { alias } = CliOptions[name];
+    const { alias } = JestCliOptions[name];
     if (alias && args[alias]) prev[name] = args[alias];
     return prev;
   }, {} as PickedJestCliOptions);
