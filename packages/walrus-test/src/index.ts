@@ -5,13 +5,14 @@ import assert from 'assert';
 import { join } from 'path';
 import { existsSync } from 'fs';
 import createDefaultConfig from './create-default-config';
-import { BirmanTestArgs, PickedJestCliOptions } from './types';
+import { WalrusTestArgs, PickedJestCliOptions } from './types';
 
 const debug = createDebug('walrus:test');
 
-export * from './utils';
+console.log('****************************************************************');
+console.log(require('jest-cli/build/cli/args'));
 
-export default async function (args: BirmanTestArgs) {
+export default async function (args: WalrusTestArgs) {
   process.env.NODE_ENV = 'test';
 
   // 找不到文件时允许测试通过
