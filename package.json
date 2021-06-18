@@ -9,15 +9,15 @@
     "test": "npm run test:packages && npm run test:examples",
     "test:packages": "lerna run --scope @walrus/* test",
     "test:examples": "lerna run --scope @examples/* test",
-    "release": "walrus release"
+    "release": "release"
   },
   "devDependencies": {
     "@types/jest": "^26.0.23",
     "@types/react": "^17.0.11",
     "@types/react-dom": "^17.0.7",
     "@walrus/cli": "^1.3.4",
-    "@walrus/plugin-release": "^1.9.1",
     "@walrus/preset-lint": "^1.1.7",
+    "@walrus/release-cli": "^0.3.0",
     "alias-hq": "^5.1.6",
     "esbuild": "^0.12.8",
     "esbuild-jest": "^0.5.0",
