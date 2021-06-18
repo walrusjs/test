@@ -1,6 +1,6 @@
 {
   "name": "@walrus/test",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "test library",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",

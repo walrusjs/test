@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/walrusjs/test/compare/@walrus/test@1.2.0...@walrus/test@1.3.0) (2021-06-18)
+
+
+### Features
+
+* 代码优化 ([5b83ae0](https://github.com/walrusjs/test/commit/5b83ae0cde456ad06483135febdaac18e9a344c1))
+
+
+
+
+
 # 1.2.0 (2021-06-01)
 
 
