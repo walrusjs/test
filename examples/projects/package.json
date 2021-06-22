@@ -1,0 +1,12 @@
+{
+  "name": "@examples/projects",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "walrus-test"
+  },
+  "dependencies": {
+    "@walrus/test": "1.3.0"
+  }
+}
