@@ -3,9 +3,9 @@ import { existsSync } from 'fs';
 import { join } from 'path';
 import assert from 'assert';
 import type { Config } from '@jest/types';
-import { BirmanTestArgs } from '../types';
+import { WalrusTestArgs } from '../types';
 
-export default function (cwd: string, args: BirmanTestArgs) {
+export default function (cwd: string, args: WalrusTestArgs) {
   const testMatchTypes = ['spec', 'test'];
   if (args.e2e) {
     testMatchTypes.push('e2e');
